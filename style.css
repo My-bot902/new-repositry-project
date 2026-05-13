@@ -1,0 +1,369 @@
+/* :hover  effect through inspect browser is at 1:22:05 */
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: black;
+}
+
+.main {
+    background-image: url("Back Imgae.jpg");
+    background-position: center center;
+    background-size: max(1200px, 100vw);
+    background-repeat: no-repeat;
+    height: 644px;
+    position: relative;
+}
+
+.main .box {
+    height: 644px;
+    width: 100%;
+    opacity: 0.69;
+    position: absolute;
+    top: 0;
+    background-color: black;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 85vw;
+    margin: auto;
+    height: 62px;
+}
+
+nav img {
+    height: 198px;
+    position: relative;
+    z-index: 10;
+    width: 312px;
+    top: 58px;
+}
+
+nav button {
+    position: relative;
+    z-index: 10;
+    height: 32px;
+    top: 17px;
+    padding: 0 9px;
+    font-size: 16px;
+    font-weight:900;
+    background-color: rgb(0, 129, 0);
+    background-color: #00A38B;
+    background-color: #1A2421;
+    background-color: #1B4D3E;
+    background-color: #00D4B4;
+    background-color: #2C3E50;
+    background: radial-gradient(circle, #00d4b48c, #2c3e5071);
+    box-shadow: 5px 5px 15px #1A2421;
+    text-align: center;
+}
+
+.hero {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    gap: 20px;
+    padding: 0 12px;
+}
+
+.hero> :first-child {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 900;
+    font-size: 48px;
+    text-align: center;
+}
+
+.hero> :nth-child(2) {
+    font-weight: 400;
+    font-size: 24px;
+    text-align: center;
+}
+
+.hero> :nth-child(3) {
+    font-weight: 200;
+    font-size: 20px;
+    text-align: center;
+}
+
+.separation {
+    height: 7px;
+    background-color: rgb(46, 44, 44);
+    position: relative;
+    z-index: 20;
+}
+
+.btn {
+    padding: 3px 9px;
+    font-weight: 400;
+    background: radial-gradient(circle, #00d4b48c, #2c3e5071);
+    color: rgb(192, 192, 192);
+    border-radius: 4px;
+    cursor: pointer;
+    border: 0.5px solid rgba(255, 255, 255, 0.295);
+}
+
+.btn-red-sm {
+    background: radial-gradient(circle, #00d4b48c, #2c3e5071);
+    color: rgb(192, 192, 192);
+    border-radius: 4px;
+    border: 0.5px solid rgba(255, 255, 255, 0.295);
+}
+
+.btn-red {
+    padding: 3px 24px;
+    font-weight: 600;
+    font-size: 17px;
+    border-radius: 4px;
+        border: 0.5px solid rgba(255, 255, 255, 0.295);    
+}
+
+.main input {
+    width: 194px;
+    font-size: 17px;
+    font-weight: 200;
+    padding: 3px 14px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.298);
+    color: rgba(255, 255, 255, 0.829);
+    border: 0.5px solid rgba(255, 255, 255,0.295);
+}
+.first{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 70vw;
+    margin: auto;
+    color: white;
+}
+.secImg {
+    position: relative;
+}
+
+.secImg img {
+    width: 555px;
+    position: relative;
+    z-index: 10;
+}
+
+.secImg video {
+    position: absolute;
+    top: 51px;
+    right: 0;
+    width: 555px;
+}
+.first > div{
+    display: flex;
+    flex-direction: column;
+}
+.first > div :first-child{
+    font-size: 48px;
+    font-weight: bold;
+}
+.first > div :nth-child(2){
+    font-size: 24px;
+}
+.faq{
+    background-color: black;
+    color: white;
+    padding: 34px;
+}
+.faq h2{
+    text-align: center;
+    font-size: 48px;
+}
+.faqbox{
+    display: flex;
+    padding: 24px;
+    max-width: 60vw;
+    font-size: 23px;
+    margin: 20px auto;
+    justify-content: space-between;
+    background-color:  #2d2d2d;
+    cursor: pointer;
+}
+.faqbox:hover{
+    transition: all 0.4s ease-out;
+    background-color:#444444;
+}
+
+footer {
+    color: white;
+    max-width: 60vw;
+    margin: auto;
+    padding: 60px;
+}
+
+footer .questions {
+    padding: 34px 0;
+}
+
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    color: white;
+}
+/* Styling for Answers */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out;
+    background-color: #444444;
+    max-width: 60vw;
+    margin: -20px auto 20px auto;
+    padding: 0 24px;
+    color: #e0e0e0;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+/* Active style toggle through JS */
+.faq-item.active .faq-answer {
+    max-height: 200px; 
+    padding: 20px 24px;
+}
+
+/* Plus to Cross rotation effect */
+.faq-item.active svg {
+    transform: rotate(45deg);
+    transition: transform 0.2s ease;
+}
+svg {
+    transition: transform 0.2s ease;
+}
+
+
+/* Is animation ko apne hero section par apply karen */
+.hero {
+    animation: netflixFadeIn 1.2s ease-out forwards;
+}
+
+/* Dono buttons par hover class lagayen */
+.btn:hover, .btn-red:hover, .btn-red-sm:hover {
+    transform: scale(1.05); /* Button 5% bada hoga */
+    box-shadow: 0 0 15px rgba(0, 212, 180, 0.6); /* Teal/Green glow */
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Default state mein bhi transition add karen taake jhatka na lage */
+.btn, .btn-red, .btn-red-sm {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+/* Pehle feature section par lagayein */
+.first {
+    animation: slideFromLeft 1s ease-out forwards;
+}
+/* 1. Shuru mein sections hidden aur thore neeche honge */
+.first, .faq {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* 2. Jab JavaScript yeh class lagayegi to section upar aa kar reveal ho jayega */
+.first.reveal, .faq.reveal {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes slideFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* Animation define kar rahe hain */
+@keyframes netflixFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px); /* 30px neeche se shuru hoga */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);    /* Apni asli jagah par aa jayega */
+    }
+}
+
+@media screen and (max-width: 1300px) {
+
+    nav{
+        max-width: 90vw;
+    }
+
+    .first {
+        flex-wrap: wrap;
+    }
+
+    .secImg img {
+        width: 305px;
+    }
+
+    .secImg video {
+        width: 305px;
+    }
+
+    .hero> :nth-child(1) {
+        font-size: 32px;
+    }
+
+    .hero> :nth-child(2) {
+        font-size: 18px;
+    }
+
+    .hero> :nth-child(3) {
+        font-size: 18px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+    }
+
+    .faq h2 {
+        text-align: center;
+        font-size: 32px;
+    }
+
+    .footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+    footer {
+        max-width: 90vw;
+        padding: 75px 0;
+    }
+
+    .footer-item{
+        align-items: center;
+    }
+ 
+
+}
+.footer a {
+    font-size: 14px;
+    color: white;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
