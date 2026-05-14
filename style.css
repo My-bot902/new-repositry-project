@@ -678,7 +678,7 @@ svg {
     }
     
     .main ,.box {
-        height: 100% !important;
+        height: 110% !important;
         min-height: 100vh;
     }
 
@@ -731,5 +731,28 @@ svg {
     }
     .hero :nth-child(3){
         font-size: 24px;
+    }
+}
+    @media screen and (max-width: 360px) {
+    /* Background image ki height ko kam karne ke liye fixed pixels dein */
+    .main, .box {
+        height: 480px !important;    /* 100vh se hata kar height choti kar di */
+        min-height: 480px !important; 
+        background-size: cover;
+    }
+
+    /* Chunkay height choti ho gayi hai, isliye hero text aur buttons ki padding kam karein */
+    .hero {
+        margin-top: 10px !important;
+        padding: 10px 15px !important;
+        gap: 10px !important;
+    }
+
+    .hero > :first-child {
+        font-size: 18px !important; /* Text ko thora aur compact kiya taake fit rahe */
+    }
+
+    .hero-buttons {
+        margin-top: 5px !important;
     }
 }
