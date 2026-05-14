@@ -579,7 +579,7 @@ svg {
         /* Video stretch na ho */
     }
 }
-@media screen and (max-width: 360px) {
+@media screen and (max-width: 362px) {
     /* 1. Main Background height fixed pixel se hata kar auto set karein */
     .main {
         height: auto !important;
@@ -610,6 +610,9 @@ svg {
 
     nav button {
         top: 0 !important;
+    }
+    .box{
+        height: 60vh;
     }
 
     /* 3. Hero Section Padding Adjustments (Faltu margins aur vh bilkul saaf) */
@@ -676,7 +679,7 @@ svg {
     
     .main .box {
         height: 100% !important;
-        min-height: 115vh;
+        min-height: 100vh;
     }
 
     /* 2. Logo left aur buttons right par bhejne ke liye row layout line reset */
