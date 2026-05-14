@@ -579,54 +579,145 @@ svg {
         /* Video stretch na ho */
     }
 }
-@media screen and (max-width: 600px) {
-    /* 1. Hero ko flex layout de kar pooray mobile screen par barabar phelao */
+@media screen and (max-width: 360px) {
+    /* 1. Main Background height fixed pixel se hata kar auto set karein */
+    .main {
+        height: auto !important;
+        min-height: 100vh;
+        background-size: cover;
+        padding-bottom: 30px;
+    }
+    
+    .main .box {
+        height: 100% !important;
+        min-height: 100vh;
+    }
+
+    /* 2. Nav layout buttons ko logo ke niche tameez se set karega */
+    nav {
+        flex-direction: column !important;
+        height: auto !important;
+        gap: 12px;
+        padding-top: 15px;
+    }
+
+    nav img {
+        width: 100px !important;
+        height: auto !important;
+        top: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    nav button {
+        top: 0 !important;
+    }
+
+    /* 3. Hero Section Padding Adjustments (Faltu margins aur vh bilkul saaf) */
     .hero {
         display: flex;
         flex-direction: column;
-        justify-content: space-between; /* Items ke darmiyan barabar space banayega */
+        justify-content: center;
         align-items: center;
-        height: calc(100vh - 120px); /* Poori mobile screen ki height use karega */
-        padding: 40px 20px;
-        box-sizing: border-box;
-        margin-top: 10vh;
+        height: auto !important;
+        padding: 20px 15px !important;
+        margin-top: 20px !important; /* Venom ka face bachane ke liye safe space */
+        gap: 15px !important;
     }
 
-    /* 2. Pehli heading ko thora sa chota aur readable karo taake jagah bache */
+    /* 4. Headings aur text properties ko clean scale karein */
     .hero > :first-child {
-        font-size: 22px !important;
-        line-height: 1.4;
-        margin-top: 20px;
-        margin-top: 10vh;
-
+        font-size: 20px !important;
+        line-height: 1.4 !important;
+        margin-top: 0 !important;
+        font-weight: 900;
     }
 
-    /* 3. Beech wale paragraphs ko thora sa push karo space badhane ke liye */
     .hero > :nth-child(2) {
-        font-size: 16px;
-        margin: 15px 0;
-        margin-top: 10vh;
-
+        font-size: 15px !important;
+        margin: 0 !important;
     }
 
     .hero > :nth-child(3) {
-        font-size: 14px;
+        font-size: 13px !important;
+        margin: 0 !important;
         color: #cccccc;
-        margin-bottom: 20px;
-        margin-top: 10vh;
-
     }
 
-    /* 4. Input fields aur button ko Venom ke face se hata kar screen ke bilkul bottom par set karo */
+    /* 5. Input elements jo gayab thay unhein screen par wapas laayein */
     .hero-buttons {
-        width: 100%;
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 10px !important;
+        margin: 15px 0 0 0 !important; /* Faltu horizontal vw margin saaf */
+    }
+
+    .main input {
+        width: 100% !important;
+        height: 40px !important;
+    }
+
+    .btn-red {
+        width: 100% !important;
+        height: 40px !important;
         display: flex;
-        flex-direction: column;
-        gap: 12px;
-        margin-top: auto; /* Is se input aur button khud ba khud bilkul bottom par chale jayenge */
-        padding-bottom: 20px;
-        margin: 1px 10vw;
+        align-items: center;
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 360px) {
+    /* 1. Container ki height thori barhayen taake bare logo ke liye jagah banay */
+    .main {
+        height: auto !important;
+        min-height: 115vh; /* 100vh se barha kar 115vh kiya taake items phel sakein */
+        background-size: cover;
+        padding-bottom: 30px;
+    }
+    
+    .main .box {
+        height: 100% !important;
+        min-height: 115vh;
+    }
+
+    /* 2. Logo left aur buttons right par bhejne ke liye row layout line reset */
+    nav {
+        flex-direction: row !important; /* Mobile par bhi side-by-side rahenge */
+        align-items: center !important;
+        justify-content: space-between !important; /* Logo left par aur buttons right corner par */
+        width: 100% !important;
+        max-width: 95vw !important; /* Screen ke aakhir tak stretch karne ke liye */
+        margin: auto !important;
+        padding: 10px 5px !important;
+        height: 70px !important;
+    }
+
+    /* 3. Logo ka size bada karne aur position set karne ke liye */
+    nav img {
+        width: 245px !important; /* Size 100px se barha kar 145px kiya taake wazeh nazar aaye */
+        height: auto !important;
+        margin-top: 10px !important; /* Screen ke upar se halka sa neeche push kiya */
+        position: relative;
+        right: 59px;
+        top: 10px !important;
+    }
+
+    /* 4. Right side wale buttons ke darmayan gap maintain rakhne ke liye */
+    nav div {
+        display: flex !important;
+        gap: 6px !important;
+        margin-top: 10px !important; /* Logo ke sath parallel align karne ke liye */
+    }
+
+    nav button {
+        top: 0 !important;
+        font-size: 13px !important; /* Choti screen par text fit rakhne ke liye */
+        padding: 4px 8px !important;
+        right: 30px;
 
     }
 
+    /* 5. Hero section spacing thori set ki taake bare logo se faasla rahe */
+    .hero {
+        margin-top: 35px !important; /* Logo aur headings ke darmiyan safe space */
+    }
 }
