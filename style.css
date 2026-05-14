@@ -636,12 +636,12 @@ svg {
     }
 
     .hero > :nth-child(2) {
-        font-size: 27px !important;
-        margin: 0 !important;
+        font-size: 22px !important;
+        margin: 10  0 !important;
     }
 
     .hero > :nth-child(3) {
-        font-size: 21px !important;
+        font-size: 18px !important;
         margin: 0 !important;
         color: #cccccc;
     }
@@ -656,7 +656,7 @@ svg {
     }
 
     .main input {
-        width: 100% !important;
+        width: 80% !important;
         height: 20px !important;
     }
 
@@ -743,13 +743,13 @@ svg {
 
     /* Chunkay height choti ho gayi hai, isliye hero text aur buttons ki padding kam karein */
     .hero {
-        margin-top: 10px !important;
+        margin-top: 81px !important;
         padding: 10px 15px !important;
         gap: 10px !important;
     }
 
     .hero > :first-child {
-        font-size: 18px !important; /* Text ko thora aur compact kiya taake fit rahe */
+        font-size: 22px !important; /* Text ko thora aur compact kiya taake fit rahe */
     }
 
     .hero-buttons {
