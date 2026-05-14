@@ -589,6 +589,7 @@ svg {
         height: calc(100vh - 120px); /* Poori mobile screen ki height use karega */
         padding: 40px 20px;
         box-sizing: border-box;
+        margin-top: 10vh;
     }
 
     /* 2. Pehli heading ko thora sa chota aur readable karo taake jagah bache */
@@ -596,18 +597,24 @@ svg {
         font-size: 22px !important;
         line-height: 1.4;
         margin-top: 20px;
+        margin-top: 10vh;
+
     }
 
     /* 3. Beech wale paragraphs ko thora sa push karo space badhane ke liye */
     .hero > :nth-child(2) {
         font-size: 16px;
         margin: 15px 0;
+        margin-top: 10vh;
+
     }
 
     .hero > :nth-child(3) {
         font-size: 14px;
         color: #cccccc;
         margin-bottom: 20px;
+        margin-top: 10vh;
+
     }
 
     /* 4. Input fields aur button ko Venom ke face se hata kar screen ke bilkul bottom par set karo */
@@ -618,5 +625,10 @@ svg {
         gap: 12px;
         margin-top: auto; /* Is se input aur button khud ba khud bilkul bottom par chale jayenge */
         padding-bottom: 20px;
+        margin-top: 10vh;
+
+    }
+    nav span, nav div{
+        margin-top: 10vh;
     }
 }
