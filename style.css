@@ -50,7 +50,7 @@ nav button {
     top: 17px;
     padding: 0 9px;
     font-size: 16px;
-    font-weight:900;
+    font-weight: 900;
     background-color: rgb(0, 129, 0);
     background-color: #00A38B;
     background-color: #1A2421;
@@ -122,7 +122,7 @@ nav button {
     font-weight: 600;
     font-size: 17px;
     border-radius: 4px;
-        border: 0.5px solid rgba(255, 255, 255, 0.295);    
+    border: 0.5px solid rgba(255, 255, 255, 0.295);
 }
 
 .main input {
@@ -133,9 +133,10 @@ nav button {
     border-radius: 4px;
     background-color: rgba(0, 0, 0, 0.298);
     color: rgba(255, 255, 255, 0.829);
-    border: 0.5px solid rgba(255, 255, 255,0.295);
+    border: 0.5px solid rgba(255, 255, 255, 0.295);
 }
-.first{
+
+.first {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -143,6 +144,7 @@ nav button {
     margin: auto;
     color: white;
 }
+
 .secImg {
     position: relative;
 }
@@ -159,39 +161,46 @@ nav button {
     right: 0;
     width: 555px;
 }
-.first > div{
+
+.first>div {
     display: flex;
     flex-direction: column;
 }
-.first > div :first-child{
+
+.first>div :first-child {
     font-size: 48px;
     font-weight: bold;
 }
-.first > div :nth-child(2){
+
+.first>div :nth-child(2) {
     font-size: 24px;
 }
-.faq{
+
+.faq {
     background-color: black;
     color: white;
     padding: 34px;
 }
-.faq h2{
+
+.faq h2 {
     text-align: center;
     font-size: 48px;
 }
-.faqbox{
+
+.faqbox {
     display: flex;
     padding: 24px;
     max-width: 60vw;
     font-size: 23px;
     margin: 20px auto;
     justify-content: space-between;
-    background-color:  #2d2d2d;
+    background-color: #2d2d2d;
     cursor: pointer;
 }
-.faqbox:hover{
+
+.faqbox:hover {
     transition: all 0.4s ease-out;
-    background-color:#444444;
+    background-color: #444444;
 }
 
 footer {
@@ -211,6 +220,7 @@ footer .questions {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     color: white;
 }
+
 /* Styling for Answers */
 .faq-answer {
     max-height: 0;
@@ -227,7 +237,7 @@ footer .questions {
 
 /* Active style toggle through JS */
 .faq-item.active .faq-answer {
-    max-height: 200px; 
+    max-height: 200px;
     padding: 20px 24px;
 }
 
@@ -236,6 +246,7 @@ footer .questions {
     transform: rotate(45deg);
     transition: transform 0.2s ease;
 }
+
 svg {
     transition: transform 0.2s ease;
 }
@@ -247,29 +258,39 @@ svg {
 }
 
 /* Dono buttons par hover class lagayen */
-.btn:hover, .btn-red:hover, .btn-red-sm:hover {
-    transform: scale(1.05); /* Button 5% bada hoga */
-    box-shadow: 0 0 15px rgba(0, 212, 180, 0.6); /* Teal/Green glow */
+.btn:hover,
+.btn-red:hover,
+.btn-red-sm:hover {
+    transform: scale(1.05);
+    /* Button 5% bada hoga */
+    box-shadow: 0 0 15px rgba(0, 212, 180, 0.6);
+    /* Teal/Green glow */
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 /* Default state mein bhi transition add karen taake jhatka na lage */
-.btn, .btn-red, .btn-red-sm {
+.btn,
+.btn-red,
+.btn-red-sm {
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
 /* Pehle feature section par lagayein */
 .first {
     animation: slideFromLeft 1s ease-out forwards;
 }
+
 /* 1. Shuru mein sections hidden aur thore neeche honge */
-.first, .faq {
+.first,
+.faq {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
 /* 2. Jab JavaScript yeh class lagayegi to section upar aa kar reveal ho jayega */
-.first.reveal, .faq.reveal {
+.first.reveal,
+.faq.reveal {
     opacity: 1;
     transform: translateY(0);
 }
@@ -279,6 +300,7 @@ svg {
         opacity: 0;
         transform: translateX(-50px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -290,17 +312,66 @@ svg {
 @keyframes netflixFadeIn {
     from {
         opacity: 0;
-        transform: translateY(30px); /* 30px neeche se shuru hoga */
+        transform: translateY(30px);
+        /* 30px neeche se shuru hoga */
     }
+
     to {
         opacity: 1;
-        transform: translateY(0);    /* Apni asli jagah par aa jayega */
+        transform: translateY(0);
+        /* Apni asli jagah par aa jayega */
     }
+}
+
+
+.footer a {
+    font-size: 14px;
+    color: white;
+}
+
+.footer-item {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+}
+
+/* --- Desktop & General Responsive Style (Purane code ki jagah isko paste karein) --- */
+.secImg {
+    position: relative;
+    width: 100%;
+    max-width: 555px;
+    /* Desktop par maximum itna bada ho */
+    margin: auto;
+}
+
+.secImg img {
+    width: 100%;
+    /* TV frame hamesha container ke mutabiq khud bada-chota hoga */
+    height: auto;
+    display: block;
+    position: relative;
+    z-index: 10;
+}
+
+.secImg video {
+    position: absolute;
+    top: 13.5%;
+    /* Hamesha TV screen ke top area par lock rahega */
+    left: 13%;
+    /* Hamesha TV screen ke left margin par lock rahega */
+    width: 73.5%;
+    /* TV frame ke andar perfect horizontal size */
+    height: 68%;
+    /* TV frame ke andar perfect vertical size */
+    object-fit: cover;
+    /* Video stretch nahi hogi */
+    z-index: 5;
+    /* Image ke piche rahegi agar frame transparent hai */
 }
 
 @media screen and (max-width: 1300px) {
 
-    nav{
+    nav {
         max-width: 90vw;
     }
 
@@ -346,24 +417,165 @@ svg {
         grid-template-columns: 1fr 1fr;
         gap: 25px;
     }
+
     footer {
         max-width: 90vw;
         padding: 75px 0;
     }
 
-    .footer-item{
+    .footer-item {
         align-items: center;
     }
- 
+
 
 }
-.footer a {
-    font-size: 14px;
-    color: white;
+
+/* This is newly added */
+@media screen and (max-width: 600px) {
+
+    .main,
+    .main .box {
+        height: auto;
+        /* Height auto karne se text dabega nahi */
+        min-height: 100vh;
+        /* Background poori mobile screen cover karega */
+        background-size: cover;
+        /* Background image auto fit hojayegi */
+    }
 }
 
-.footer-item {
-    display: flex;
-    flex-direction: column;
-    gap: 23px;
+@media screen and (max-width: 600px) {
+    nav {
+        flex-direction: row;
+        /* Mobile par bhi logo aur buttons side by side rahenge */
+        align-items: center;
+        justify-content: space-between;
+        max-width: 95vw;
+        /* Poori screen ki width use hogi */
+        padding: 10px;
+    }
+
+    nav img {
+        width: 100px;
+        /* Logo chota hojayega taake face clear dikhe */
+        height: auto;
+        top: 0;
+        /* Purana push reset */
+    }
+
+    nav button {
+        top: 0;
+        /* Buttons ko alignment mein lao */
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    /* Pure page par horizontal scroll khatam karne ke liye */
+    body,
+    html {
+        overflow-x: hidden;
+    }
+
+    .hero {
+        padding: 40px 15px;
+        /* Spacing standard karein */
+        height: auto;
+    }
+
+    .hero> :first-child {
+        font-size: 24px;
+        /* Heading text size fit hojayega */
+        width: 100%;
+    }
+
+    .hero-buttons {
+        display: flex;
+        flex-direction: column;
+        /* Inputs aur button upar niche */
+        width: 100%;
+        gap: 10px;
+    }
+
+    .main input {
+        width: 100%;
+        /* Box se bahar nahi niklega */
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav img {
+        width: 240px;
+        height: auto;
+        top: 0;
+        margin-top: 30px;
+        /* Is se logo smoothly 15px neeche aa jayega */
+    }
+}
+
+/* --- Ultra Small Screens Fix (Under 360px) --- */
+@media screen and (max-width: 360px) {
+    nav {
+        flex-direction: column;
+        /* Logo upar aur buttons uske neeche aa jayenge */
+        gap: 12px;
+        align-items: center;
+        max-width: 100%;
+    }
+
+    nav img {
+        width: 110px;
+        /* Logo ka size mazeed thora chota kiya */
+        margin-top: 10px;
+    }
+
+    nav button {
+        margin-top: 0;
+        /* Purana margin clear kiya */
+    }
+
+    /* Buttons ke darmayan thora gap rakhne ke liye */
+    nav div {
+        display: flex;
+        gap: 8px;
+    }
+
+    .hero> :first-child {
+        font-size: 18px;
+        /* Text size chota kiya taake wrap sahi ho */
+    }
+}
+
+@media screen and (max-width: 361px) {
+
+    /* 1. Pure container ko relative width do */
+    .secImg {
+        position: relative;
+        width: 100%;
+        max-width: 280px;
+        /* Screen ke andar fit rehne ke liye */
+        margin: auto;
+    }
+
+    /* 2. TV Image ko flexible banao */
+    .secImg img {
+        width: 100% !important;
+        height: auto !important;
+        display: block;
+    }
+
+    /* 3. Video ko hamesha TV frame ke coordinates par lock karo */
+    .secImg video {
+        position: absolute;
+        top: 14% !important;
+        /* TV screen ka top area */
+        left: 12% !important;
+        /* TV screen ka left margin */
+        width: 76% !important;
+        /* TV frame ke andar fit horizontal size */
+        height: 70% !important;
+        /* TV frame ke andar fit vertical size */
+        object-fit: cover;
+        /* Video stretch na ho */
+    }
 }
