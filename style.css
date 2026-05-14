@@ -625,10 +625,8 @@ svg {
         gap: 12px;
         margin-top: auto; /* Is se input aur button khud ba khud bilkul bottom par chale jayenge */
         padding-bottom: 20px;
-        margin-top: 10vh;
+        margin: 1px 10vw;
 
     }
-    nav span, nav div{
-        margin-top: 10vh;
-    }
+
 }
