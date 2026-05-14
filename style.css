@@ -633,12 +633,12 @@ svg {
     }
 
     .hero > :nth-child(2) {
-        font-size: 15px !important;
+        font-size: 27px !important;
         margin: 0 !important;
     }
 
     .hero > :nth-child(3) {
-        font-size: 13px !important;
+        font-size: 21px !important;
         margin: 0 !important;
         color: #cccccc;
     }
@@ -718,6 +718,15 @@ svg {
 
     /* 5. Hero section spacing thori set ki taake bare logo se faasla rahe */
     .hero {
-        margin-top: 35px !important; /* Logo aur headings ke darmiyan safe space */
+        margin-top: 341px !important; /* Logo aur headings ke darmiyan safe space */
+    }
+    .hero :first-child{
+        font-size: 33px  !important;
+    }
+    .hero :nth-child(2){
+        font-size: 27px;
+    }
+    .hero :nth-child(3){
+        font-size: 24px;
     }
 }
