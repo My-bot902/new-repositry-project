@@ -541,7 +541,7 @@ svg {
     }
 
     .hero> :first-child {
-        font-size: 18px;
+        font-size: 10px;
         /* Text size chota kiya taake wrap sahi ho */
     }
 }
@@ -657,11 +657,11 @@ svg {
 
     .main input {
         width: 100% !important;
-        height: 40px !important;
+        height: 20px !important;
     }
 
     .btn-red {
-        width: 100% !important;
+        width: 48% !important;
         height: 40px !important;
         display: flex;
         align-items: center;
@@ -724,10 +724,10 @@ svg {
         margin-top: 341px !important; /* Logo aur headings ke darmiyan safe space */
     }
     .hero :first-child{
-        font-size: 33px  !important;
+        font-size: 17px  !important;
     }
     .hero :nth-child(2){
-        font-size: 27px;
+        font-size: 17px;
     }
     .hero :nth-child(3){
         font-size: 24px;
@@ -754,5 +754,6 @@ svg {
 
     .hero-buttons {
         margin-top: 5px !important;
+        font-size: 13px;
     }
 }
