@@ -63,3 +63,39 @@ const scrollObserver = new IntersectionObserver((entries, observer) => {
 scrollSections.forEach(section => {
     scrollObserver.observe(section);
 });
+const words = ['Web Development.', 'UI/UX Design.', 'Sigma Coding.', 'Figma Layouts.'];
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+const targetElement = document.getElementById("element");
+
+function typeEffect() {
+    const currentWord = words[wordIndex];
+    
+    if (isDeleting) {
+        targetElement.innerText = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+    } else {
+        targetElement.innerText = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+    }
+
+    let typingSpeed = isDeleting ? 40 : 80;
+
+    if (!isDeleting && charIndex === currentWord.length) {
+        typingSpeed = 1200; 
+        isDeleting = true;
+    } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        wordIndex = (wordIndex + 1) % words.length; 
+        typingSpeed = 400; 
+    }
+
+    setTimeout(typeEffect, typingSpeed);
+}
+
+// Script load hote hi 2000ms (2 seconds) ka wait karega aur fir function chalayeja
+document.addEventListener("DOMContentLoaded", () => {
+    setTimeout(typeEffect, 1000); 
+});
+

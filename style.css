@@ -757,3 +757,18 @@ svg {
         font-size: 13px;
     }
 }
+/* Typed text color */
+#element {
+    color: #00D4B4; /* Aap ke project ka teal/green color theme */
+}
+
+/* Blinking cursor effect */
+.cursor {
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+}
